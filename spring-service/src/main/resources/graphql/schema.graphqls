@@ -1,0 +1,30 @@
+type Repository {
+  id: ID!
+  githubUrl: String!
+  name: String!
+  description: String
+  stars: Int
+  language: String
+  lastAnalyzed: String
+  createdAt: String
+  analysis: Analysis
+}
+
+type Analysis {
+  id: ID!
+  summary: String!
+  complexityScore: Float!
+  topics: [String!]!
+  createdAt: String
+}
+
+type Query {
+  getRepository(id: ID!): Repository
+  listRepositories(language: String, limit: Int): [Repository!]!
+  getAnalysis(repositoryId: ID!): Analysis
+}
+
+type Mutation {
+  addRepository(githubUrl: String!): Repository!
+  triggerAnalysis(repositoryId: ID!): Analysis!
+}
