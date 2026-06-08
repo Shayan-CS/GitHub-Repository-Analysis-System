@@ -16,6 +16,4 @@ class RepositoryOut(BaseModel):
     last_analyzed: str | None = None
     created_at: str | None = None
 
-    class Config:
-        pass
     model_config = {"from_attributes": True}
