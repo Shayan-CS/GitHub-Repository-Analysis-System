@@ -8,7 +8,7 @@ pydantic>=2.0.0
 pydantic-settings>=2.0.0
 sqlalchemy==2.0.50
 numpy==1.26.4
-chromadb==0.3.31
+chromadb==0.4.24
 openai==0.27.8
 pytest==7.4.2
 requests==2.31.0
